@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+  --color-forest: #2D5A3D;
+  --color-forest-light: #3A7350;
+  --color-sage: #7A9E7E;
+  --color-mint: #E8F0E9;
+  --color-cream: #FAF7F2;
+  --color-sand: #E8E0D4;
+  --color-bark: #3D3229;
+  --color-stone: #6B6560;
+  --color-spring: #A8C686;
+  --color-summer: #E8A849;
+  --color-autumn: #C4704B;
+  --color-winter: #7BA7BC;
+
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-bark);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (hover: hover) {
+  .hover-lift {
+    transition: transform 200ms ease-out, box-shadow 200ms ease-out;
+  }
+  .hover-lift:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

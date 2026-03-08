@@ -1,0 +1,134 @@
+{
+  "metadata": {
+    "title": "mevsimin.de - Mevsiminde Ye, Doğal Kal",
+    "description": "Hangi meyve ve sebzeler şimdi mevsiminde? Mevsiminde beslenmenin faydalarını keşfet, sağlıklı tarifler bul."
+  },
+  "nav": {
+    "home": "Anasayfa",
+    "seasonal": "Mevsim Takvimi",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Mevsiminde ye,\ndoğal kal.",
+    "subtitle": "Hangi meyve ve sebzeler şimdi mevsiminde? Sağlıklı ve sürdürülebilir beslenmenin ilk adımını keşfet.",
+    "cta": "Mevsim Takvimini Gör"
+  },
+  "currentMonth": {
+    "title": "{month} Ayında Mevsiminde",
+    "viewAll": "Tümünü Gör"
+  },
+  "seasonPreview": {
+    "title": "Mevsim Takvimi",
+    "subtitle": "Her mevsimin kendine özgü lezzetlerini keşfet",
+    "products": "{count} ürün"
+  },
+  "whySeasonal": {
+    "title": "Neden Mevsiminde?",
+    "subtitle": "Mevsiminde beslenmenin sana ve doğaya faydaları",
+    "nutritious": {
+      "title": "Daha Besleyici",
+      "description": "Mevsiminde toplanan ürünler en yüksek besin değerine sahiptir. Vitamin ve mineral içerikleri zirvededir."
+    },
+    "tasty": {
+      "title": "Daha Lezzetli",
+      "description": "Doğal olgunlaşma sürecini tamamlayan ürünler çok daha lezzetli ve aromatiktir."
+    },
+    "sustainable": {
+      "title": "Daha Sürdürülebilir",
+      "description": "Sera yerine açık alanda yetişen ürünler daha az enerji tüketir ve karbon ayak izini azaltır."
+    }
+  },
+  "blogHighlights": {
+    "title": "Sağlıklı Yaşam Rehberi",
+    "subtitle": "Mevsiminde beslenme, tarifler ve sağlık ipuçları",
+    "viewAll": "Tüm Yazılar",
+    "readingTime": "{minutes} dk okuma"
+  },
+  "season": {
+    "spring": "İlkbahar",
+    "summer": "Yaz",
+    "autumn": "Sonbahar",
+    "winter": "Kış"
+  },
+  "category": {
+    "all": "Hepsi",
+    "fruit": "Meyveler",
+    "vegetable": "Sebzeler"
+  },
+  "months": {
+    "1": "Ocak",
+    "2": "Şubat",
+    "3": "Mart",
+    "4": "Nisan",
+    "5": "Mayıs",
+    "6": "Haziran",
+    "7": "Temmuz",
+    "8": "Ağustos",
+    "9": "Eylül",
+    "10": "Ekim",
+    "11": "Kasım",
+    "12": "Aralık"
+  },
+  "monthsShort": {
+    "1": "Oca",
+    "2": "Şub",
+    "3": "Mar",
+    "4": "Nis",
+    "5": "May",
+    "6": "Haz",
+    "7": "Tem",
+    "8": "Ağu",
+    "9": "Eyl",
+    "10": "Eki",
+    "11": "Kas",
+    "12": "Ara"
+  },
+  "mevsim": {
+    "title": "Mevsim Takvimi",
+    "subtitle": "Hangi meyve ve sebzeler şimdi mevsiminde keşfet",
+    "emptyState": "Bu filtrelere uygun ürün bulunamadı",
+    "seasonalTip": "İpucu: Mevsiminde beslenmek hem cüzdanınıza hem sağlığınıza iyi gelir."
+  },
+  "detail": {
+    "breadcrumbHome": "Anasayfa",
+    "breadcrumbSeasonal": "Mevsim Takvimi",
+    "nutrition": "Besin Değerleri",
+    "per100g": "100g başına",
+    "calories": "Kalori",
+    "protein": "Protein",
+    "carbs": "Karbonhidrat",
+    "fiber": "Lif",
+    "vitaminC": "C Vitamini",
+    "healthBenefits": "Sağlık Faydaları",
+    "pickingTips": "Nasıl Seçilir?",
+    "storageTips": "Nasıl Saklanır?",
+    "availability": "Mevsim Takvimi",
+    "relatedFoods": "Benzer Ürünler"
+  },
+  "blog": {
+    "title": "Sağlıklı Yaşam Rehberi",
+    "subtitle": "Mevsiminde beslenme, tarifler ve sağlık ipuçları",
+    "readMore": "Devamını Oku",
+    "readingTime": "{minutes} dk okuma",
+    "featured": "Öne Çıkan",
+    "loadMore": "Daha Fazla Yükle",
+    "categories": {
+      "all": "Hepsi",
+      "nutrition": "Beslenme",
+      "recipes": "Tarifler",
+      "seasonalGuide": "Mevsim Rehberi",
+      "health": "Sağlık"
+    },
+    "tableOfContents": "İçindekiler",
+    "relatedPosts": "İlgili Yazılar"
+  },
+  "footer": {
+    "description": "Mevsiminde beslenmenin yolunu gösteren rehberiniz. Sağlıklı, lezzetli ve sürdürülebilir.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "resources": "Kaynaklar",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "privacy": "Gizlilik Politikası",
+    "copyright": "© {year} mevsimin.de — Tüm hakları saklıdır."
+  }
+}
