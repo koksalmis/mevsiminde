@@ -29,6 +29,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     { href: "/", label: t("home") },
     { href: "/mevsim", label: t("seasonal") },
     { href: "/blog", label: t("blog") },
+    { href: "/mevsim?liste=1", label: "Alışveriş listem" },
   ] as const;
 
   return (

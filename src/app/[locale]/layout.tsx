@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/layout/Navbar";
+import { ShoppingProvider } from "@/components/planner/ShoppingProvider";
 import Footer from "@/components/layout/Footer";
 import "../globals.css";
 
@@ -68,9 +69,11 @@ export default async function LocaleLayout({
     <html lang={locale} className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen font-sans antialiased">
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <ShoppingProvider>
           <Navbar />
           <main>{children}</main>
           <Footer />
+          </ShoppingProvider>
         </NextIntlClientProvider>
       </body>
     </html>

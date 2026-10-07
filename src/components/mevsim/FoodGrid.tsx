@@ -21,7 +21,7 @@ export default function FoodGrid({ foods }: FoodGridProps) {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-4 lg:gap-6">
+    <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 xl:grid-cols-3 lg:gap-5">
       {foods.map((food) => (
         <FoodCard key={food.id} food={food} variant="full" />
       ))}

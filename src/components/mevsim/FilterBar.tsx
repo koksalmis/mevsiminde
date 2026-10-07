@@ -41,6 +41,7 @@ export default function FilterBar({
           {months.map((m) => (
             <button
               key={m}
+              aria-pressed={selectedMonth === m}
               onClick={() => onMonthChange(selectedMonth === m ? null : m)}
               className={cn(
                 "shrink-0 snap-start rounded-full px-3 py-1.5 text-sm font-medium transition-colors min-h-[40px]",
@@ -60,6 +61,7 @@ export default function FilterBar({
             {seasons.map((s) => (
               <button
                 key={s}
+                aria-pressed={selectedSeason === s}
                 onClick={() => onSeasonChange(selectedSeason === s ? null : s)}
                 className={cn(
                   "rounded-full px-3 py-1 text-xs font-medium transition-colors min-h-[36px]",
@@ -79,6 +81,7 @@ export default function FilterBar({
             {(["all", "fruit", "vegetable"] as const).map((c) => (
               <button
                 key={c}
+                aria-pressed={(c === "all" && !selectedCategory) || selectedCategory === c}
                 onClick={() => onCategoryChange(c === "all" ? null : (c as Category))}
                 className={cn(
                   "rounded-full px-3 py-1 text-xs font-medium transition-colors min-h-[36px]",

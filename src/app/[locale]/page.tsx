@@ -8,6 +8,8 @@ import { getAllBlogPosts } from "@/lib/blog";
 import { getCurrentMonth } from "@/lib/utils";
 import type { Season } from "@/types";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   const currentMonth = getCurrentMonth();
   const currentFoods = getFoodsByMonth(currentMonth);

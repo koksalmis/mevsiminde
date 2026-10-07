@@ -2,7 +2,7 @@ import type { Month, Season } from "@/types";
 import { MONTHS_IN_SEASON } from "./constants";
 
 export function getCurrentMonth(): Month {
-  return (new Date().getMonth() + 1) as Month;
+  return Number(new Intl.DateTimeFormat("en", { month: "numeric", timeZone: "Europe/Istanbul" }).format(new Date())) as Month;
 }
 
 export function getCurrentSeason(): Season {

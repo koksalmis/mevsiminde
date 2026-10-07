@@ -24,7 +24,7 @@ export default function CurrentSeasonSection({ foods, currentMonth }: CurrentSea
         <div className="flex items-end justify-between">
           <SectionHeading title={t("title", { month: monthName })} align="left" />
           <Link
-            href="/mevsim"
+            href={`/mevsim?ay=${currentMonth}`}
             className="hidden items-center gap-1 text-sm font-medium text-forest hover:underline md:flex"
           >
             {t("viewAll")}
@@ -48,7 +48,7 @@ export default function CurrentSeasonSection({ foods, currentMonth }: CurrentSea
 
         <div className="mt-6 text-center md:hidden">
           <Link
-            href="/mevsim"
+            href={`/mevsim?ay=${currentMonth}`}
             className="inline-flex items-center gap-1 text-sm font-medium text-forest"
           >
             {t("viewAll")}

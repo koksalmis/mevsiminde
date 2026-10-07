@@ -57,3 +57,6 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+:focus-visible { outline: 2px solid var(--color-forest); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

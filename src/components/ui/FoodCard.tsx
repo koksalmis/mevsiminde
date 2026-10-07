@@ -2,6 +2,8 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "lucide-react";
 import type { Food } from "@/types";
+import AddToList from "@/components/planner/AddToList";
+import { foodSymbol } from "@/lib/food-symbols";
 import SeasonBadge from "./SeasonBadge";
 import { cn } from "@/lib/utils";
 
@@ -25,7 +27,7 @@ export default function FoodCard({ food, variant = "full", className }: FoodCard
       >
         <div className="relative h-24 w-24 overflow-hidden rounded-full bg-mint lg:h-28 lg:w-28">
           <div className="flex h-full w-full items-center justify-center text-4xl">
-            {food.category === "fruit" ? "🍎" : "🥬"}
+            {foodSymbol(food.id)}
           </div>
         </div>
         <span className="text-center text-sm font-semibold text-bark">{food.name}</span>
@@ -37,16 +39,14 @@ export default function FoodCard({ food, variant = "full", className }: FoodCard
   }
 
   return (
+    <div className={cn("hover-lift group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm", className)}>
     <Link
       href={`/mevsim/${food.slug}`}
-      className={cn(
-        "hover-lift group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm",
-        className
-      )}
+      className="flex flex-1 flex-col"
     >
       <div className="relative aspect-square bg-mint">
         <div className="flex h-full w-full items-center justify-center text-6xl">
-          {food.category === "fruit" ? "🍎" : "🥬"}
+          {foodSymbol(food.id)}
         </div>
         <div className="absolute left-2 top-2">
           <SeasonBadge season={food.seasons[0]} />
@@ -63,5 +63,7 @@ export default function FoodCard({ food, variant = "full", className }: FoodCard
         </div>
       </div>
     </Link>
+    <div className="px-3 pb-4 lg:px-4"><AddToList id={food.id} name={food.name} /></div>
+    </div>
   );
 }
