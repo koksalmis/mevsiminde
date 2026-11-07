@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import AddToList from "@/components/planner/AddToList";
 import { foodSymbol } from "@/lib/food-symbols";
 import SeasonBadge from "@/components/ui/SeasonBadge";
+import SeasonReminder from "./SeasonReminder";
+import { seasonStartMonths } from "@/lib/season";
 import type { Food } from "@/types";
 
 interface FoodHeroProps {
@@ -35,6 +37,13 @@ export default function FoodHero({ food }: FoodHeroProps) {
         <p className="mt-2 text-sm text-stone">{monthRange}</p>
         <p className="mt-4 leading-relaxed text-stone">{food.description}</p>
         <div className="mt-6"><AddToList id={food.id} name={food.name} /></div>
+        <SeasonReminder
+          name={food.name}
+          slug={food.slug}
+          months={food.months}
+          pickingTips={food.pickingTips}
+          startMonthName={seasonStartMonths(food.months).map((m) => tMonths(String(m) as "1")).join(" ve ")}
+        />
       </div>
     </div>
   );
