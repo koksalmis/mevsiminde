@@ -9,6 +9,7 @@ import NutritionTable from "@/components/detail/NutritionTable";
 import HealthBenefits from "@/components/detail/HealthBenefits";
 import AvailabilityCalendar from "@/components/detail/AvailabilityCalendar";
 import RelatedFoods from "@/components/detail/RelatedFoods";
+import DishIdeas from "@/components/detail/DishIdeas";
 
 interface PageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -88,6 +89,7 @@ export default async function FoodDetailPage({ params }: PageProps) {
               </div>
             </div>
 
+            <DishIdeas food={food} />
             <AvailabilityCalendar months={food.months} />
             <RelatedFoods foods={related} />
           </div>
