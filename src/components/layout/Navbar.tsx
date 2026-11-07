@@ -21,6 +21,7 @@ export default function Navbar() {
   const links = [
     { href: "/", label: t("home") },
     { href: "/mevsim", label: t("seasonal") },
+    { href: "/takvim", label: "Yıllık takvim" },
     { href: "/blog", label: t("blog") },
     { href: "/mevsim?liste=1", label: "Alışveriş listem" },
   ] as const;
@@ -29,7 +30,7 @@ export default function Navbar() {
     <>
       <header
         className={cn(
-          "sticky top-0 z-40 transition-all duration-300",
+          "sticky top-0 z-40 transition-all duration-300 print:hidden",
           isScrolled
             ? "bg-white/80 shadow-sm backdrop-blur-md"
             : "bg-transparent"
