@@ -7,7 +7,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-sand bg-mint/50">
+    <footer className="border-t border-sand bg-mint/50 print:hidden">
       <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 lg:px-8 lg:py-16">
         <div className="flex flex-col items-center gap-8 text-center lg:flex-row lg:items-start lg:gap-16 lg:text-left">
           <div className="max-w-xs">
@@ -33,6 +33,11 @@ export default function Footer() {
               <li>
                 <Link href="/mevsim" className="text-sm text-stone transition-colors hover:text-forest">
                   {t("nav.seasonal")}
+                </Link>
+              </li>
+              <li>
+                <Link href="/takvim" className="text-sm text-stone transition-colors hover:text-forest">
+                  Yıllık hasat takvimi
                 </Link>
               </li>
               <li>

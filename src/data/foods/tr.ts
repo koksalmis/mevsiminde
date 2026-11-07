@@ -128,7 +128,7 @@ export const foodsTr: Record<string, FoodLocale> = {
       "Cilt sağlığını destekler",
       "Soğuk algınlığına karşı korur",
     ],
-    pickingTips: "Parlak turuncu renkli, ağır ve sıkı kabuklulara seçin. Çok yumuşak olmamalıdır.",
+    pickingTips: "Parlak turuncu renkli, ağır ve sıkı kabuklu olanları seçin. Çok yumuşak olmamalıdır.",
     storageTips: "Oda sıcaklığında 1 hafta, buzdolabında 2-3 hafta saklanabilir.",
   },
   spinach: {
@@ -180,7 +180,7 @@ export const foodsTr: Record<string, FoodLocale> = {
       "Göz sağlığını destekler",
       "Antiinflamatuar özellikleri vardır",
     ],
-    pickingTips: "Orta boyutlu, sert ve parlak yeşil kabuklulara seçin. Çok büyük olanlar sulu ve lezzetsiz olabilir.",
+    pickingTips: "Orta boyutlu, sert ve parlak yeşil kabuklu olanları seçin. Çok büyük olanlar sulu ve lezzetsiz olabilir.",
     storageTips: "Buzdolabının sebze gözünde 4-5 gün saklanabilir.",
   },
   broccoli: {

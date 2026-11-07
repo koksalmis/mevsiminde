@@ -130,5 +130,12 @@
     "contact": "İletişim",
     "privacy": "Gizlilik Politikası",
     "copyright": "© {year} mevsimin.de — Tüm hakları saklıdır."
+  },
+  "marketTip": {
+    "eyebrow": "Pazarcı ipucu",
+    "title": "{name} nasıl seçilir?",
+    "storage": "Eve gelince:",
+    "next": "Başka ipucu",
+    "detail": "{name} hakkında her şey"
   }
 }

@@ -28,6 +28,7 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const links = [
     { href: "/", label: t("home") },
     { href: "/mevsim", label: t("seasonal") },
+    { href: "/takvim", label: "Yıllık takvim" },
     { href: "/blog", label: t("blog") },
     { href: "/mevsim?liste=1", label: "Alışveriş listem" },
   ] as const;
