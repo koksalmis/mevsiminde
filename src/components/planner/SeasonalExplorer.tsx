@@ -38,7 +38,7 @@ export default function SeasonalExplorer() {
     window.history.replaceState(null, "", `${window.location.pathname}${next.size ? `?${next}` : ""}`);
   }
   async function copy() {
-    try { await navigator.clipboard.writeText(`Alışveriş listem — mevsimin.de\n${list.map(food => `□ ${food.name}`).join("\n")}`); setCopiedList(listSignature); setCopyError(""); }
+    try { await navigator.clipboard.writeText(`Alışveriş listem — mevsimin.de\n${list.map(food => `□ ${food.name}\n   Pazarcı ipucu: ${food.pickingTips}`).join("\n")}`); setCopiedList(listSignature); setCopyError(""); }
     catch { setCopyError("Liste kopyalanamadı. Ürün adlarını seçerek kopyalayabilirsiniz."); }
   }
   return <>
@@ -60,8 +60,8 @@ export default function SeasonalExplorer() {
         {!foods.length && <button onClick={() => update({ ay: null, mevsim: null, kategori: null, q: null, liste: null })} className="mx-auto block rounded-full bg-forest px-6 py-3 text-sm text-white">Tüm ürünleri göster</button>}
       </section>
       <aside className="h-fit rounded-3xl border border-sand bg-white p-5 lg:sticky lg:top-48">
-        <ShoppingBasket className="mb-3 text-forest" size={26}/><h2 className="font-serif text-2xl">Alışveriş listem</h2><p className="mt-2 text-xs leading-relaxed text-stone">Bu tarayıcıda saklanır. Pazara çıkmadan önce kopyalayıp yanında götür.</p>
-        {!list.length ? <p className="my-6 text-sm text-stone">İlk ürününü “Listeme ekle” ile seç. Çantan burada dolmaya başlayacak.</p> : <ul className="my-5 divide-y divide-sand">{list.map(food => <li key={food.id} className="flex items-center gap-2 py-3"><span aria-hidden>{foodSymbol(food.id)}</span><Link href={`/mevsim/${food.slug}`} className="flex-1 text-sm hover:text-forest">{food.name}<span className="block text-xs text-stone">{food.months.includes(current) ? "Bu ay mevsiminde" : "Bu ay takvimde değil"}</span></Link><button aria-label={`${food.name} ürününü listeden çıkar`} onClick={() => { toggle(food.id); setCopiedList(null); }} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-mint"><X size={16}/></button></li>)}</ul>}
+        <ShoppingBasket className="mb-3 text-forest" size={26}/><h2 className="font-serif text-2xl">Alışveriş listem</h2><p className="mt-2 text-xs leading-relaxed text-stone">Bu tarayıcıda saklanır. Kopyaladığında her ürünün pazarcı ipucu da listeye eklenir.</p>
+        {!list.length ? <p className="my-6 text-sm text-stone">İlk ürününü “Listeme ekle” ile seç. Çantan burada dolmaya başlayacak.</p> : <ul className="my-5 divide-y divide-sand">{list.map(food => <li key={food.id} className="py-3"><div className="flex items-center gap-2"><span aria-hidden>{foodSymbol(food.id)}</span><Link href={`/mevsim/${food.slug}`} className="flex-1 text-sm hover:text-forest">{food.name}<span className="block text-xs text-stone">{food.months.includes(current) ? "Bu ay mevsiminde" : "Bu ay takvimde değil"}</span></Link><button aria-label={`${food.name} ürününü listeden çıkar`} onClick={() => { toggle(food.id); setCopiedList(null); }} className="flex h-10 w-10 items-center justify-center rounded-full hover:bg-mint"><X size={16}/></button></div><details className="group mt-1 pl-6"><summary className="cursor-pointer list-none text-xs font-medium text-forest [&::-webkit-details-marker]:hidden">Pazarcı ipucu <span aria-hidden className="inline-block transition-transform group-open:rotate-90">›</span></summary><p className="mt-1 text-xs leading-relaxed text-stone">{food.pickingTips}</p></details></li>)}</ul>}
         {!!list.length && <button onClick={copy} className="flex w-full items-center justify-center gap-2 rounded-full bg-forest px-4 py-3 text-sm text-white">{copied ? <Check size={16}/> : <Copy size={16}/>} {copied ? "Kopyalandı" : "Listeyi kopyala"}</button>}
         <p role="status" className="mt-3 text-xs text-stone">{error || copyError}</p>
       </aside>
